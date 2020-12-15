@@ -5,4 +5,51 @@ Insert any custom code (web-analytics, resources, etc.) - it will appear in the 
 {{ if or .Params.math .Site.Params.math }}
 {{ partial "math.html" . }}
 {{ end }}
+
+<style>
+    td, th {
+    border: thin solid #999 !important;
+    padding: 12px 15px;
+}
+
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+}
+
+tbody tr {
+    border-bottom: thin solid #dddddd;
+}
+
+
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+    }
+
+
+body.dark tbody tr:nth-of-type(even) {
+    background-color: #383838;
+}
+
+
+</style>
 <!-- Head custom content area end -->

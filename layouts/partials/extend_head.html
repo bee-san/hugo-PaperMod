@@ -57,7 +57,42 @@ img {
     display: block;
     margin: auto;
     text-align: center;
+    transition: transform .5s;
+
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #888;
+	border-bottom: 1px solid #888;
+	background-color: #fcfcfc;
+	padding: 4px;
 }
+
+
+img:hover
+{
+    -ms-transform: scale(2, 2);
+    -webkit-transform: scale(2, 2);
+    transform: scale(2, 2);
+}
+
+figure {
+    text-align: center;
+    line-height: 0.1em;
+    padding: 1em;
+    margin: 5px; /* adjust as needed */
+    overflow-wrap: break-word;
+}
+
+figure img {
+  vertical-align: top;
+}
+
+figure figcaption{
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
 
 </style>
 <!-- Head custom content area end -->

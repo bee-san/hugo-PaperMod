@@ -35,7 +35,8 @@ tbody tr{
 
 
 tbody tr:last-of-type {
-    border-bottom: 2px solid #E9DF00;
+    /* border-bottom: 2px solid #E9DF00; */
+    border-bottom: 2px solid #dddddd;
 }
 
 tbody td.active-item {
@@ -52,7 +53,6 @@ body.dark tbody tr:nth-of-type(even) {
     background-color: #383838;
 }
 
-
 img {
     display: block;
     margin: auto;
@@ -64,7 +64,9 @@ img {
 	border-right: 1px solid #888;
 	border-bottom: 1px solid #888;
 	background-color: #fcfcfc;
-	padding: 4px;
+    padding: 1px;
+    margin-block: 10px;
+    
 }
 
 
@@ -74,6 +76,11 @@ img:hover
     -ms-transform: scale(2, 2);
     -webkit-transform: scale(2, 2);
     transform: scale(2, 2);
+}
+
+img.unstyled {
+    border: 0px black solid !important;
+    transition: unset;
 }
 
 figure {

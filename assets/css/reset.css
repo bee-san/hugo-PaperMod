@@ -79,7 +79,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    overflow-x: scroll;
+    overflow-x: auto;
     word-break: keep-all
 }
 
@@ -113,13 +113,8 @@ img {
     max-width: 100%
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-    height: 6px
-}
-
 ::-webkit-scrollbar-track {
-    background: var(--theme)
+    background: 0 0
 }
 
 .list:not(.dark)::-webkit-scrollbar-track {
@@ -135,9 +130,9 @@ img {
     background: var(--secondary)
 }
 
-@media screen and (max-width:800px) {
+@media screen and (min-width:768px) {
     ::-webkit-scrollbar {
-        width: 8px;
-        height: 2px
+        width: 10px;
+        height: 6px
     }
 }

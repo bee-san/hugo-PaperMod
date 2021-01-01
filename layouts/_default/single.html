@@ -28,7 +28,8 @@
     </div>
     {{- end}}
   </header>
-  {{- partial "cover.html" (dict "cxt" . "IsHome" false) }}
+  {{- $isHidden := ((.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInSingle) | default .Params.cover.hidden )}}
+  {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
   {{- if .Params.ShowToc }}
   <!-- Convert kit top of article email sub -->
   <script async data-uid="9d5f55b5a0" src="https://sunny-founder-9987.ck.page/9d5f55b5a0/index.js"></script>

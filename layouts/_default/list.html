@@ -7,6 +7,11 @@
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
   <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description }}
+  </div>
+  {{- end }}
 </header>
 {{- end }}
 
@@ -44,9 +49,11 @@
     <p>{{ .Summary | plainify | htmlUnescape }}...</p>
   </section>
   {{- end }}
+  {{- if not (.Param "hideMeta") }}
   <footer class="entry-footer">
     {{- partial "post_meta.html" . -}}
   </footer>
+  {{- end }}
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}

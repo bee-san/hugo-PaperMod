@@ -32,11 +32,12 @@
     </div>
     {{- end}}
   </header>
+  <br>
+  <script async data-uid="9d5f55b5a0" src="https://sunny-founder-9987.ck.page/9d5f55b5a0/index.js"></script>
+  <br>
   {{- $isHidden := .Params.cover.hidden | default .Site.Params.cover.hiddenInSingle | default .Site.Params.cover.hidden}}
   {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
   {{- if (.Param "ShowToc") }}
-  <script async data-uid="9d5f55b5a0" src="https://sunny-founder-9987.ck.page/9d5f55b5a0/index.js"></script>
-  <br>
   <div class="toc">
     <details {{if (.Param "TocOpen") }} open{{ end }}>
       <summary accesskey="c" title="(Alt + C)">
@@ -84,21 +85,21 @@
     {{- partial "share_icons.html" . }}
     {{- end }}
   </footer>
+    <!-- CK number 2 at bottom of post -->
+    <br>
+    <script async data-uid="9d5f55b5a0" src="https://sunny-founder-9987.ck.page/9d5f55b5a0/index.js"></script>
+    <br>
+  
+    <!-- Buy me a burrito-->
+    <br>
+    <a href="https://www.buymeacoffee.com/beecodes"><img class = "unstyled" src="https://img.buymeacoffee.com/button-api/?text=Buy me a burrito&emoji=🌯&slug=beecodes&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"></a>
+    </br>
 
-  <!-- CK number 2 at bottom of post -->
-  <br>
-  <script async data-uid="9d5f55b5a0" src="https://sunny-founder-9987.ck.page/9d5f55b5a0/index.js"></script>
-  <br>
-
-  <!-- Buy me a burrito-->
-  <br>
-  <a href="https://www.buymeacoffee.com/beecodes"><img class = "unstyled" src="https://img.buymeacoffee.com/button-api/?text=Buy me a burrito&emoji=🌯&slug=beecodes&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"></a>
-  </br>
-
-  {{- if and ($.Site.Params.comments) (ne .Params.comments false) }}
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}
   {{- end }}
 </article>
 
 {{- end  }}{{/* end main */}}
+
+

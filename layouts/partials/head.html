@@ -34,7 +34,7 @@
 {{- $stylesheet := (slice $common $extended) | resources.Concat "assets/css/stylesheet.css" | minify }}
 
 {{- if not .Site.Params.assets.disableFingerprinting }}
-{{- $stylesheet := $stylesheet | fingerprint -}}
+{{- $stylesheet := $stylesheet -}}
 <!-- {{ $stylesheet.Data.Integrity }}"
 -->
 <link href="{{ $stylesheet.RelPermalink }}" integrity="" rel="preload stylesheet"
@@ -48,7 +48,7 @@
 {{- $fastsearch := resources.Get "js/fastsearch.js" | resources.ExecuteAsTemplate "js/fastsearch.js" .Site.Params.fuseOpts }}
 {{- $fusejs := resources.Get "js/fuse.js" }}
 {{- if not .Site.Params.assets.disableFingerprinting }}
-{{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify | fingerprint }}
+{{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify}}
 <script defer src="{{ $search.RelPermalink }}" onload="loadSearch();" integrity=""></script>
 {{- else}}
 {{ $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | minify }}
